@@ -53,7 +53,7 @@ class FilterDialog(
                 ),
                 Filter(
                     FilterType.ITEM_VIDEO_GALLERY,
-                    R.drawable.ic_videocam,
+                    R.drawable.ic_video,
                     "Video"
                 ),
                 Filter(
