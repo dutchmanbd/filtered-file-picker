@@ -4,21 +4,14 @@
 
     <data>
         <variable
-            name="dialog"
-            type="com.afollestad.materialdialogs.MaterialDialog" />
-        <variable
             name="filter"
             type="com.ticonsys.filepicker.data.model.Filter" />
-        <variable
-            name="listener"
-            type="com.ticonsys.filepicker.internal.FilterItemClickListener" />
 
     </data>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="@{()->listener.onFilterItemClick(dialog, filter)}"
         android:orientation="vertical">
 
         <ImageView

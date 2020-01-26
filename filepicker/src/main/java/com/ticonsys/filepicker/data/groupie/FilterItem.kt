@@ -9,17 +9,13 @@ import com.xwray.groupie.databinding.BindableItem
 
 
 class FilterItem(
-    private val listener: FilterItemClickListener,
-    private val dialog: MaterialDialog,
-    private val filter: Filter
+    val filter: Filter
 ): BindableItem<SimpleFilterItemBinding>() {
 
     override fun getLayout() = R.layout.simple_filter_item
 
     override fun bind(viewBinding: SimpleFilterItemBinding, position: Int) {
         viewBinding.filter = filter
-        viewBinding.listener = listener
-        viewBinding.dialog = dialog
         viewBinding.ivPicker.setImageResource(filter.icon)
     }
 }

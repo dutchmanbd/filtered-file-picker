@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity(), FilterItemClickListener {
         setContentView(R.layout.activity_main)
 
         btnFilePicker.setOnClickListener {
-            FilterDialog(this, this).show()
+            FilterDialog(this).show{dialog, filter->
+                dialog.dismiss()
+                Log.d(TAG, "File Choose: $filter")
+            }
         }
 
     }

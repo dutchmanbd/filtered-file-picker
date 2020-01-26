@@ -16,7 +16,6 @@ import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.dialog_filter.view.*
 
 class FilterDialog(
-    private val listener: FilterItemClickListener,
     private val activity: Activity
 ) {
 
@@ -26,8 +25,7 @@ class FilterDialog(
             .customView(R.layout.dialog_filter)
     }
 
-
-    fun show(){
+    fun show(clickListener: (MaterialDialog, Filter) -> Unit){
         val window = dialog.window
         val wlp = window?.attributes
         wlp?.gravity = Gravity.BOTTOM
@@ -71,11 +69,15 @@ class FilterDialog(
         view.rvFileFilter?.apply {
             adapter = pickerAdapter
         }
+        pickerAdapter.setOnItemClickListener { item, _ ->
+            item as FilterItem
+            clickListener(dialog, item.filter)
+        }
 
     }
 
     private fun List<Filter>.toFilterItems() = map {
-        FilterItem(listener, dialog, it)
+        FilterItem(it)
     }
 
 
