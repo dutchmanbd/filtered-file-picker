@@ -48,7 +48,7 @@ class FilterDialog(
                 ),
                 Filter(
                     FilterType.ITEM_CAMERA,
-                    R.drawable.ic_camera,
+                    R.drawable.ic_camera1,
                     "Camera"
                 ),
                 Filter(
