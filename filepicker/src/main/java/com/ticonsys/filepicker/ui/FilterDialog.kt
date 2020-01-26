@@ -47,6 +47,11 @@ class FilterDialog(
                     "Gallery"
                 ),
                 Filter(
+                    FilterType.ITEM_CAMERA,
+                    R.drawable.ic_camera,
+                    "Camera"
+                ),
+                Filter(
                     FilterType.ITEM_FILES,
                     R.drawable.ic_documents,
                     "Documents"
@@ -57,7 +62,7 @@ class FilterDialog(
                     "Video"
                 ),
                 Filter(
-                    FilterType.ITEM_VIDEO_GALLERY,
+                    FilterType.ITEM_AUDIO,
                     R.drawable.ic_audio,
                     "Audio"
                 )
